@@ -1,0 +1,182 @@
+{
+	"compiler": {
+		"version": "0.8.25+commit.b61c2a91"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_dt",
+						"type": "uint256"
+					}
+				],
+				"name": "convertTimestampToYMDHMS",
+				"outputs": [
+					{
+						"internalType": "uint16",
+						"name": "year",
+						"type": "uint16"
+					},
+					{
+						"internalType": "uint8",
+						"name": "month",
+						"type": "uint8"
+					},
+					{
+						"internalType": "uint8",
+						"name": "day",
+						"type": "uint8"
+					},
+					{
+						"internalType": "uint8",
+						"name": "hour",
+						"type": "uint8"
+					},
+					{
+						"internalType": "uint8",
+						"name": "minute",
+						"type": "uint8"
+					},
+					{
+						"internalType": "uint8",
+						"name": "second",
+						"type": "uint8"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint16",
+						"name": "_year",
+						"type": "uint16"
+					},
+					{
+						"internalType": "uint8",
+						"name": "_month",
+						"type": "uint8"
+					},
+					{
+						"internalType": "uint8",
+						"name": "_day",
+						"type": "uint8"
+					},
+					{
+						"internalType": "uint8",
+						"name": "_hour",
+						"type": "uint8"
+					},
+					{
+						"internalType": "uint8",
+						"name": "_minute",
+						"type": "uint8"
+					},
+					{
+						"internalType": "uint8",
+						"name": "_second",
+						"type": "uint8"
+					}
+				],
+				"name": "convertYMDHMStoTimestamp",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"author": "Skeleton Codeworks, LLC <skeleton.codeworks@gmail.com>",
+			"details": "This library primarily provides utilities to convert between various date and time formats.  The supported formats are: 1) Unix timestamps, 2) strings in yyyy-mm-dd format (also known as ISO), and 3) YMD format (year, month, day, as integers). Additionally, support is provided for the date and time formats analogous to the date formats above: 1) Unix timestamps (identical to the format above), 2) strings in yyyy-mm-dd hh:mm:ss format, and 3) YMDHMS format (year, month, day, hour, minute, second, as integers). Hours, minutes, and seconds are in 24-hour clock format (i.e., hour from 0 - 23, minute from 0 - 59, and second from 0 - 59). Convenience functions for validation, splitting date strings, and calculating the day of the week are also provided. Note that this library does not use \"yyyy-mm-ddThh:mm:ssZ\" as valid date and time format, but rather \"yyyy-mm-dd hh:mm:ss\".",
+			"kind": "dev",
+			"methods": {
+				"convertTimestampToYMDHMS(uint256)": {
+					"details": "Convert timestamp to YMDHMS (year, month, day, hour, minute, second)",
+					"params": {
+						"_dt": "Date as timestamp integer"
+					},
+					"returns": {
+						"day": "Returns day as `uint8`",
+						"hour": "Returns hour as `uint8`",
+						"minute": "Returns minute as `uint8`",
+						"month": "Returns month as `uint8`",
+						"second": "Returns second as `uint8`",
+						"year": "Returns year as `uint16`"
+					}
+				},
+				"convertYMDHMStoTimestamp(uint16,uint8,uint8,uint8,uint8,uint8)": {
+					"details": "Convert YMDHMS (year, month, day, hour, minute, second) to timestamp",
+					"params": {
+						"_day": "Day as integer",
+						"_hour": "Hour as integer",
+						"_minute": "Minute as integer",
+						"_month": "Month as integer",
+						"_second": "Second as integer",
+						"_year": "Year as integer"
+					},
+					"returns": {
+						"_0": "Returns timestamp as `uint256`"
+					}
+				}
+			},
+			"title": "Date utility library for Solidity contracts",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/DateUtils.sol": "DateUtils"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/DateUtils.sol": {
+			"keccak256": "0x1a1beed057af34d5aa960111eb402941200915c0dfbeaaa77ae570cd0c769d8e",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://663e8ef0c64278d24a10f814562ab207a1dc4258d39d95c50195f4a82835e710",
+				"dweb:/ipfs/QmRrKujJNFhghNWTvCuUpRbNy13rsYtD4PK8s6qb3Q6o2c"
+			]
+		},
+		"contracts/StringUtils.sol": {
+			"keccak256": "0xd910625c6dd7c725622544c43eae08ad44d15d3feb9bba36462c0487c689a2c5",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://346c2796fd5514bdd5dfbf219fc8572604a393950fb531e233765106672fa03f",
+				"dweb:/ipfs/QmUUv8wfyjZUEKXtMZ45JerJLzuGarHtyhdfEG1AUmf2Sr"
+			]
+		},
+		"contracts/Strings.sol": {
+			"keccak256": "0x35de9c52e5e7cd72fd017f862348a78039fa630948953436ddec5f627e0d8ce7",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://0beabe47558ce729a0bc7f63280f46479a3c821d23c4ce2aa7229da85b88984a",
+				"dweb:/ipfs/QmeskCvjjpr6QeX9KCSMKBGyLWvYevUWBUrQpvKzH8Cigw"
+			]
+		}
+	},
+	"version": 1
+}

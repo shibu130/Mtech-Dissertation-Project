@@ -1,0 +1,59 @@
+{
+	"compiler": {
+		"version": "0.8.25+commit.b61c2a91"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "bytes32",
+						"name": "mask",
+						"type": "bytes32"
+					}
+				],
+				"name": "log_bytemask",
+				"type": "event"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/Strings.sol": "strings"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/Strings.sol": {
+			"keccak256": "0x35de9c52e5e7cd72fd017f862348a78039fa630948953436ddec5f627e0d8ce7",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://0beabe47558ce729a0bc7f63280f46479a3c821d23c4ce2aa7229da85b88984a",
+				"dweb:/ipfs/QmeskCvjjpr6QeX9KCSMKBGyLWvYevUWBUrQpvKzH8Cigw"
+			]
+		}
+	},
+	"version": 1
+}

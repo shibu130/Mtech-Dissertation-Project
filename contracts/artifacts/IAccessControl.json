@@ -1,0 +1,309 @@
+{
+	"deploy": {
+		"VM:-": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"main:1": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"ropsten:3": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"rinkeby:4": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"kovan:42": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"goerli:5": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"Custom": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		}
+	},
+	"data": {
+		"bytecode": {
+			"functionDebugData": {},
+			"generatedSources": [],
+			"linkReferences": {},
+			"object": "",
+			"opcodes": "",
+			"sourceMap": ""
+		},
+		"deployedBytecode": {
+			"functionDebugData": {},
+			"generatedSources": [],
+			"immutableReferences": {},
+			"linkReferences": {},
+			"object": "",
+			"opcodes": "",
+			"sourceMap": ""
+		},
+		"gasEstimates": null,
+		"methodIdentifiers": {
+			"adminAddress()": "fc6f9468",
+			"candidateAddress()": "1daa7a38",
+			"decrementVotingPowerForAdmin(address)": "880baf27",
+			"decrementVotingPowerForUser(address)": "5691e3dd",
+			"getAdminDetailsByAddress(address)": "f1a89faa",
+			"getCandidateDetailsByAddress(address)": "08211bc5",
+			"getRoleOfAddress(address,bytes32)": "4a65ec81",
+			"getUserDetailsByAddress(address)": "5393edab",
+			"incrementVotingPowerForAdmin(address)": "3abd00a3",
+			"incrementVotingPowerForUser(address)": "c8bd3a3e",
+			"requestToBeAddedAsUser(address,string,string)": "7155eb3b",
+			"userAddress()": "e4128fb3"
+		}
+	},
+	"abi": [
+		{
+			"inputs": [],
+			"name": "adminAddress",
+			"outputs": [
+				{
+					"internalType": "address[]",
+					"name": "admins",
+					"type": "address[]"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [],
+			"name": "candidateAddress",
+			"outputs": [
+				{
+					"internalType": "address[]",
+					"name": "candidate",
+					"type": "address[]"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "address",
+					"name": "useradminAddress",
+					"type": "address"
+				}
+			],
+			"name": "decrementVotingPowerForAdmin",
+			"outputs": [],
+			"stateMutability": "nonpayable",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "address",
+					"name": "useradminAddress",
+					"type": "address"
+				}
+			],
+			"name": "decrementVotingPowerForUser",
+			"outputs": [],
+			"stateMutability": "nonpayable",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "address",
+					"name": "adminAddres",
+					"type": "address"
+				}
+			],
+			"name": "getAdminDetailsByAddress",
+			"outputs": [
+				{
+					"components": [
+						{
+							"internalType": "uint256",
+							"name": "VotingPower",
+							"type": "uint256"
+						}
+					],
+					"internalType": "struct IAccessControl.AdminUserType",
+					"name": "",
+					"type": "tuple"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "address",
+					"name": "addressOfCandidate",
+					"type": "address"
+				}
+			],
+			"name": "getCandidateDetailsByAddress",
+			"outputs": [
+				{
+					"components": [
+						{
+							"internalType": "string",
+							"name": "Name",
+							"type": "string"
+						},
+						{
+							"internalType": "address",
+							"name": "CandidateAddress",
+							"type": "address"
+						},
+						{
+							"internalType": "string",
+							"name": "Region",
+							"type": "string"
+						}
+					],
+					"internalType": "struct IAccessControl.CandidateType",
+					"name": "",
+					"type": "tuple"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "address",
+					"name": "addressOfUser",
+					"type": "address"
+				},
+				{
+					"internalType": "bytes32",
+					"name": "role",
+					"type": "bytes32"
+				}
+			],
+			"name": "getRoleOfAddress",
+			"outputs": [
+				{
+					"internalType": "bool",
+					"name": "",
+					"type": "bool"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "address",
+					"name": "addressOfUser",
+					"type": "address"
+				}
+			],
+			"name": "getUserDetailsByAddress",
+			"outputs": [
+				{
+					"components": [
+						{
+							"internalType": "string",
+							"name": "Name",
+							"type": "string"
+						},
+						{
+							"internalType": "address",
+							"name": "UserAddress",
+							"type": "address"
+						},
+						{
+							"internalType": "string",
+							"name": "Region",
+							"type": "string"
+						},
+						{
+							"internalType": "uint256",
+							"name": "VotingPower",
+							"type": "uint256"
+						}
+					],
+					"internalType": "struct IAccessControl.UserType",
+					"name": "",
+					"type": "tuple"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "address",
+					"name": "useradminAddress",
+					"type": "address"
+				}
+			],
+			"name": "incrementVotingPowerForAdmin",
+			"outputs": [],
+			"stateMutability": "nonpayable",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "address",
+					"name": "useradminAddress",
+					"type": "address"
+				}
+			],
+			"name": "incrementVotingPowerForUser",
+			"outputs": [],
+			"stateMutability": "nonpayable",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "address",
+					"name": "addressOfUser",
+					"type": "address"
+				},
+				{
+					"internalType": "string",
+					"name": "_name",
+					"type": "string"
+				},
+				{
+					"internalType": "string",
+					"name": "_region",
+					"type": "string"
+				}
+			],
+			"name": "requestToBeAddedAsUser",
+			"outputs": [],
+			"stateMutability": "nonpayable",
+			"type": "function"
+		},
+		{
+			"inputs": [],
+			"name": "userAddress",
+			"outputs": [
+				{
+					"internalType": "address[]",
+					"name": "users",
+					"type": "address[]"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		}
+	]
+}
